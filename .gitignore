@@ -1,0 +1,17 @@
+*.600pk
+*.aux
+*.fd
+*.fdb_latexmk
+*.fls
+*.glo
+*.hd
+*.idx
+*.ilg
+*.ind
+*.log
+*.mf
+*.out
+*.sty
+*.tfm
+*.tgz
+*.toc
