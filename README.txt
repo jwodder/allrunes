@@ -3,15 +3,17 @@ ALLRUNES
   for writing runes of all kinds using LaTeX.
 
 AUTHOR AND HOMEPAGE
-  Carl-Gustav Werner is the author of allrunes.
-  More information can be found at
-  http://www.maths.lth.se/~carl/allrunes/
+  Carl-Gustav Werner is the original author of allrunes.
+  John T. Wodder II has maintained it since 2026.
+  The package's source can be found at
+  https://github.com/jwodder/allrunes
 
 COPYRIGHT
   This program is provided under the terms of the
   LaTeX Project Public License distributed from CTAN
   archives in the directory macros/latex/base/lppl.txt.
   (C) 2001-2014 Carl-Gustav Werner
+  (C) 2026 John T. Wodder II
 
 VERSION
   This README.txt describes the allrunes version 2.1
@@ -40,15 +42,14 @@ CHANGES
         documentation.
   2.1.1 Bugfix. \S and \P didn't work in ordinary text.
         Updated the installation instructions in this file.
-        
+  2.1.2 Bugfix.  Rename an internal command in order to not clash with a
+        built-in LaTeX command added in 2020.
 
 FILES AND DIRECTORIES AT CTAN
   README.txt     This file.
   allrunes.dtx   The source for the allrunes Metafont fonts and
                  LaTeX package.
   allrunes.ins   Driver file for allrunes.dtx
-  allrunes.ps    PostScript version of the documentation,
-                 using only mf (pk) fonts.
   allrunes.pdf   Pdf version of the documentation,
                  using only type1 fonts.
   type1          Directory for the type1 fonts, containing:
@@ -150,7 +151,7 @@ INSTALLATION (OF THE TYPE1 FONT FILES)
      and in texlive you run
        update-updmap
        updmap-sys
-  5. Run 
+  5. Run
        latex allrunes.dtx
      then try both
         dvips -Ppk allrunes
@@ -158,4 +159,3 @@ INSTALLATION (OF THE TYPE1 FONT FILES)
         dvips -Poutline allrunes
      (which will use the outline type1 fonts). You might also try
         pdflatex allrunes.dtx
-
