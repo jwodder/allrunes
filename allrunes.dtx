@@ -1248,58 +1248,58 @@
 \newcommand{\stdefault}{s}  % straight
 \newcommand{\rodefault}{r}  % rounded
 
-\newcommand{\cwdefault}{m} % curved,   low twigs
-\newcommand{\swdefault}{t} % straight, low twigs
-\newcommand{\rwdefault}{q} % rounded,  low twigs
+\newcommand{\uplowdefault}{m} % curved,   low twigs
+\newcommand{\stlowdefault}{t} % straight, low twigs
+\newcommand{\rolowdefault}{q} % rounded,  low twigs
 
 \DeclareRobustCommand{\curvedtwigs}{%
   \ifthenelse{\equal{\f@shape}{\stdefault}}%
               {\fontshape{\updefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\swdefault}}%
-              {\fontshape{\cwdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\stlowdefault}}%
+              {\fontshape{\uplowdefault}\selectfont}{}%
   \ifthenelse{\equal{\f@shape}{\rodefault}}%
               {\fontshape{\updefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\rwdefault}}%
-              {\fontshape{\cwdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\rolowdefault}}%
+              {\fontshape{\uplowdefault}\selectfont}{}%
 }
 
 \DeclareRobustCommand{\straighttwigs}{%
   \ifthenelse{\equal{\f@shape}{\updefault}}%
               {\fontshape{\stdefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\cwdefault}}%
-              {\fontshape{\swdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\uplowdefault}}%
+              {\fontshape{\stlowdefault}\selectfont}{}%
   \ifthenelse{\equal{\f@shape}{\rodefault}}%
               {\fontshape{\stdefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\rwdefault}}%
-              {\fontshape{\swdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\rolowdefault}}%
+              {\fontshape{\stlowdefault}\selectfont}{}%
 }
 
 \DeclareRobustCommand{\roundedtwigs}{%
   \ifthenelse{\equal{\f@shape}{\updefault}}%
               {\fontshape{\rodefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\cwdefault}}%
-              {\fontshape{\rwdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\uplowdefault}}%
+              {\fontshape{\rolowdefault}\selectfont}{}%
   \ifthenelse{\equal{\f@shape}{\stdefault}}%
               {\fontshape{\rodefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\swdefault}}%
-              {\fontshape{\rwdefault}\selectfont}{}%
+  \ifthenelse{\equal{\f@shape}{\stlowdefault}}%
+              {\fontshape{\rolowdefault}\selectfont}{}%
 }
 
 \DeclareRobustCommand{\lowtwigs}{%
   \ifthenelse{\equal{\f@shape}{\updefault}}%
-              {\fontshape{\cwdefault}\selectfont}{}%
+              {\fontshape{\uplowdefault}\selectfont}{}%
   \ifthenelse{\equal{\f@shape}{\stdefault}}%
-              {\fontshape{\swdefault}\selectfont}{}%
+              {\fontshape{\stlowdefault}\selectfont}{}%
   \ifthenelse{\equal{\f@shape}{\rodefault}}%
-              {\fontshape{\rwdefault}\selectfont}{}%
+              {\fontshape{\rolowdefault}\selectfont}{}%
 }
 
 \DeclareRobustCommand{\hightwigs}{%
-  \ifthenelse{\equal{\f@shape}{\cwdefault}}%
+  \ifthenelse{\equal{\f@shape}{\uplowdefault}}%
               {\fontseries{\updefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\swdefault}}%
+  \ifthenelse{\equal{\f@shape}{\stlowdefault}}%
               {\fontseries{\stdefault}\selectfont}{}%
-  \ifthenelse{\equal{\f@shape}{\rwdefault}}%
+  \ifthenelse{\equal{\f@shape}{\rolowdefault}}%
               {\fontseries{\rodefault}\selectfont}{}%
 }
 
